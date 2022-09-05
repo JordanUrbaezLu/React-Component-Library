@@ -1,0 +1,49 @@
+.astroPopoverContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.astroPopover {
+  color: rgb(223, 223, 223);
+  position: relative;
+  text-align: center;
+  width: fit-content;
+  max-width: 200px;
+  background-color: rgb(60, 60, 60);
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 8px 10px;
+  text-overflow: wrap;
+  word-wrap: break-word;
+  margin-top: 4px;
+  z-index: 999;
+  &.nubbin {
+    &::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      z-index: 1000;
+      background-color: rgb(60, 60, 60);
+      position: absolute;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+    &.bottom {
+      margin-top: 11px;
+    }
+  }
+}
+
+.bottom {
+  &::before {
+    top: 0;
+    left: 50%;
+  }
+}
+
+.top {
+  &::before {
+    top: 100%;
+    left: 50%;
+  }
+}

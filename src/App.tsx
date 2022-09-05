@@ -1,26 +1,51 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styles from "./App.module.scss";
+import AstroButton from "./components/AstroButton/AstroButton";
+import {
+  AiOutlineArrowUp,
+  AiOutlineArrowDown,
+  AiOutlineArrowRight,
+  AiOutlineArrowLeft,
+} from "react-icons/ai";
+import { AstroPopover } from "./components/AstroPopover/AstroPopover";
+import { useRef, useState } from "react";
+import { toSentenceCase, fixedToSentenceCase } from "./toSentenceCase";
 
-function App() {
+const App = () => {
+  const ref = useRef(null);
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.AppContainer}>
+      <AstroButton
+        leadingIcon={<AiOutlineArrowLeft />}
+        trailingIcon={<AiOutlineArrowRight />}
+        size="large"
+        variant="primary"
+        onClick={() => console.log("clicked")}
+      >
+        Left Right
+      </AstroButton>
+      <AstroButton
+        leadingIcon={<AiOutlineArrowUp />}
+        trailingIcon={<AiOutlineArrowDown />}
+        size="large"
+        variant="primary"
+      >
+        Up Down
+      </AstroButton>
+      <AstroPopover
+        isOpen={isOpen}
+        hasNubbin
+        position="top"
+        text="I am Popover Text"
+        trigger={
+          <AstroButton onClick={() => setIsOpen(!isOpen)} ref={ref} size="medium" variant="secondary">
+            onClick
+          </AstroButton>
+        }
+      ></AstroPopover>
     </div>
   );
-}
+};
 
 export default App;

@@ -1,0 +1,73 @@
+.astroButton {
+    border-radius: 30px;
+    width: fit-content;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    &:hover {
+      cursor: pointer;
+    }
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 5px;
+  }
+  
+  .primary {
+    background-color: rgb(255, 183, 77);
+    color: black;
+    border: 2px solid rgb(255, 183, 77);
+    &:hover {
+      color: rgb(147 51 234);
+      border: 2px solid rgb(147 51 234);
+    }
+    &:active {
+      background: rgb(255, 183, 77, 0.8);
+    }
+  }
+  
+  .secondary {
+    background-color: rgb(147 51 234);
+    color: black;
+    border: 2px solid rgb(147 51 234);
+    &:hover {
+      color: rgb(255, 183, 77);
+      border: 2px solid rgb(255, 183, 77);
+    }
+    &:active {
+      background: rgb(147, 51, 234, 0.8);
+    }
+  }
+  
+  .small {
+    font-size: 12px;
+    padding: 6px 8px;
+    .leadingIcon,
+    .trailingIcon {
+      height: 12px;
+    }
+  }
+  
+  .medium {
+    font-size: 16px;
+    padding: 8px 10px;
+    .leadingIcon,
+    .trailingIcon {
+      height: 16px;
+    }
+  }
+  
+  .large {
+    font-size: 20px;
+    padding: 10px 12px;
+    .leadingIcon,
+    .trailingIcon {
+      height: 20px;
+    }
+  }
+  
+  .disabled {
+    color: gray !important;
+    border: 2px solid gray !important;
+    background: rgb(0, 0, 0, 0.1) !important;
+    cursor: default !important;
+  }
+  
