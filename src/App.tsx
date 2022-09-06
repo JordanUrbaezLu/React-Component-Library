@@ -8,7 +8,6 @@ import {
 } from "react-icons/ai";
 import { AstroPopover } from "./components/AstroPopover/AstroPopover";
 import { useRef, useState } from "react";
-import { toSentenceCase, fixedToSentenceCase } from "./toSentenceCase";
 
 const App = () => {
   const ref = useRef(null);
