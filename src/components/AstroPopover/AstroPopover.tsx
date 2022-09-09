@@ -13,7 +13,7 @@ interface AstroPopoverProps {
   isOpen?: boolean;
 }
 
-export const AstroPopover: React.FC<AstroPopoverProps> = ({
+const AstroPopover: React.FC<AstroPopoverProps> = ({
   trigger,
   position = "bottom",
   hasNubbin = false,
@@ -61,3 +61,5 @@ export const AstroPopover: React.FC<AstroPopoverProps> = ({
     </div>
   );
 };
+
+export default AstroPopover;

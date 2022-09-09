@@ -4,21 +4,32 @@ import styles from "./AstroTextField.module.scss";
 
 export type Variants = "primary" | "secondary" | "tertiary";
 export type Size = "small" | "medium" | "large";
+export type Type =
+  | "email"
+  | "number"
+  | "password"
+  | "search"
+  | "tel"
+  | "text"
+  | "time"
+  | "url";
 
-interface AstroTextField {
+interface AstroTextFieldProps {
   variant?: Variants;
   size?: Size;
   placeholder?: string;
   trailingIcon?: React.ReactNode;
-  disabled?: boolean,
+  disabled?: boolean;
+  type?: Type;
 }
 
-export const AstroTextField: React.FC<AstroTextField> = ({
+const AstroTextField: React.FC<AstroTextFieldProps> = ({
   variant = "primary",
   size = "medium",
   placeholder,
   trailingIcon,
   disabled = false,
+  type = "text",
 }) => {
   const classes = classNames(
     styles.astroTextField,
@@ -28,22 +39,27 @@ export const AstroTextField: React.FC<AstroTextField> = ({
     size === "small" && styles.small,
     size === "medium" && styles.medium,
     size === "large" && styles.large,
-    disabled && styles.disabled,
+    disabled && styles.disabled
   );
 
   const iconClasses = classNames(
     size === "small" && styles.iconSmall,
     size === "medium" && styles.iconMedium,
     size === "large" && styles.iconLarge,
-    disabled && styles.disabled,
-  )
+    disabled && styles.disabled
+  );
 
   return (
     <div className={styles.astroTextFieldContainer}>
-      <input disabled={disabled} className={classes} placeholder={placeholder} />
-      <span className={iconClasses}>
-        {trailingIcon}
-      </span>
+      <input
+        type={type}
+        disabled={disabled}
+        className={classes}
+        placeholder={placeholder}
+      />
+      <span className={iconClasses}>{trailingIcon}</span>
     </div>
   );
 };
+
+export default AstroTextField;

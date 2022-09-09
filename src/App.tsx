@@ -1,6 +1,6 @@
 import styles from "./App.module.scss";
 import {AiFillEye} from "react-icons/ai"
-import { AstroTextField } from "./components/AstroTextField/AstroTextField";
+import AstroTextField from "./components/AstroTextField/AstroTextField";
 
 const App = () => {
 
