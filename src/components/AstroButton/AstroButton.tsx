@@ -3,11 +3,12 @@ import styles from "./AstroButton.module.scss";
 import classNames from "classnames";
 
 export type Variants = "primary" | "secondary";
+export type Size = "small" | "medium" | "large";
 
 interface AstroButtonProps {
   leadingIcon?: React.ReactNode;
   trailingIcon?: React.ReactNode;
-  size?: "small" | "medium" | "large";
+  size?: Size;
   variant?: Variants;
   children: React.ReactNode;
   disabled?: boolean;
