@@ -15,12 +15,12 @@ describe("AstroButton", () => {
 });
 
 describe("Accessibility", () => {
-    test("Should have no aaccessibility violations.", async () => {
-        const { container } = render(<AstroButton>AstroButton</AstroButton>);
-        const results = await axe(container);
-        expect(results).toHaveNoViolations();
-    })
-})
+  test("Should have no accessibility violations.", async () => {
+    const { container } = render(<AstroButton>AstroButton</AstroButton>);
+    const results = await axe(container);
+    expect(results).toHaveNoViolations();
+  });
+});
 
 describe("Props", () => {
   test.each<AstroButtonVariants>(["primary", "secondary"])(
@@ -52,6 +52,20 @@ describe("Props", () => {
     render(<AstroButton trailingIcon="trailing">AstroButton</AstroButton>);
     expect(
       screen.getByRole("button", { name: "AstroButton trailing" })
+    ).toBeInTheDocument();
+  });
+
+  test("Should render disabled correctly.", () => {
+    render(<AstroButton disabled>AstroButton</AstroButton>);
+    expect(screen.getByRole("button", { name: "AstroButton" })).toHaveClass(
+      "disabled"
+    );
+  });
+
+  test("Should render children correctly.", () => {
+    render(<AstroButton>AstroButton</AstroButton>);
+    expect(
+      screen.getByRole("button", { name: "AstroButton" })
     ).toBeInTheDocument();
   });
 });

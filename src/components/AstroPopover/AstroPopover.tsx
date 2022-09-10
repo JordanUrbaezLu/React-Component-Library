@@ -4,11 +4,11 @@ import classNames from "classnames";
 import { getRefHeight as getTriggerHeight } from "../../utility/getRefHeight";
 import { getRefWidth as getPopoverWidth } from "../../utility/getRefWidth";
 
-export type Position = "bottom" | "left" | "right" | "top";
+export type AstroPopoverPosition = "bottom" | "top";
 
 interface AstroPopoverProps {
   trigger: React.ReactNode;
-  position?: Position;
+  position?: AstroPopoverPosition;
   hasNubbin?: boolean;
   text: string;
   isOpen?: boolean;
