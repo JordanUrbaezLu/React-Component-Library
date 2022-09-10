@@ -7,9 +7,9 @@ export default {
   component: AstroButton,
 } as ComponentMeta<typeof AstroButton>;
 
-const Template: ComponentStory<typeof AstroButton> = (args) => (
-  <AstroButton {...args}>Button</AstroButton>
-);
+const Template: ComponentStory<typeof AstroButton> = (args) => {
+  return <AstroButton {...args}>Button</AstroButton>;
+};
 
 export const Default = Template.bind({});
 

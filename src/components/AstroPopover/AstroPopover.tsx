@@ -1,7 +1,8 @@
 import * as React from "react";
 import styles from "./AstroPopover.module.scss";
 import classNames from "classnames";
-import { getPopoverContainerHeight } from "./getPopoverContainerHeight";
+import { getTriggerHeight } from "./getTriggerHeight";
+import { getPopoverWidth } from "./getPopoverWidth";
 
 export type Position = "bottom" | "left" | "right" | "top";
 
@@ -20,9 +21,12 @@ const AstroPopover: React.FC<AstroPopoverProps> = ({
   text,
   isOpen = false,
 }) => {
-  const [popoverHeight, setPopoverHeight] = React.useState<number>();
+  const [triggerHeight, setTriggerHeight] = React.useState<number>();
+  const [popoverWidth, setPopoverWidth] = React.useState<number>();
 
-  const popoverContainerRef = React.useRef<HTMLDivElement>(null);
+  const triggerRef = React.useRef<HTMLDivElement>(null);
+  const popoverRef = React.useRef<HTMLDivElement>(null);
+
   const classes = classNames(
     styles.astroPopover,
     position === "bottom" && styles.bottom,
@@ -31,26 +35,36 @@ const AstroPopover: React.FC<AstroPopoverProps> = ({
   );
 
   React.useEffect(() => {
-    const positionStyle = getPopoverContainerHeight({
-      ref: popoverContainerRef,
+    const height = getTriggerHeight({
+      ref: triggerRef,
     });
-    setPopoverHeight(positionStyle);
+    const width = getPopoverWidth({
+      ref: popoverRef,
+    });
+    setTriggerHeight(height);
+    setPopoverWidth(width);
   }, [isOpen]);
 
   return (
-    <div ref={popoverContainerRef} className={styles.astroPopoverContainer}>
+    <div ref={triggerRef} className={styles.astroPopoverContainer}>
       {trigger}
-      <div style={isOpen ? {transition: "opacity 0.5s", opacity: 1} : {opacity: 0}}>
+      <div
+        style={
+          isOpen ? { transition: "opacity 0.5s", opacity: 1 } : { opacity: 0 }
+        }
+      >
         {isOpen && (
           <div
+            ref={popoverRef}
             style={
               position === "top"
                 ? {
                     bottom: `${
-                      (popoverHeight || 0) + (hasNubbin ? 7 : 0) + 4
+                      (triggerHeight || 0) + (hasNubbin ? 7 : 0) + 4
                     }px`,
+                    transform: `translateX(${-0.5 * (popoverWidth || 0)}px)`,
                   }
-                : {}
+                : { transform: `translateX(${-0.5 * (popoverWidth || 0)}px)` }
             }
             className={classes}
           >

@@ -15,7 +15,6 @@ const Template: ComponentStory<typeof AstroPopover> = (args) => {
     <AstroPopover
       isOpen={isOpen}
       {...args}
-      text="Popover"
       trigger={
         <AstroButton onClick={() => setIsOpen(!isOpen)}>Trigger</AstroButton>
       }
@@ -23,7 +22,38 @@ const Template: ComponentStory<typeof AstroPopover> = (args) => {
   );
 };
 
-// found a bug with popover where the parent should have 
-// position: "relative" and child should have position: "absoulte"
-
 export const Default = Template.bind({});
+Default.args = {
+  text: "Popover",
+};
+
+export const TopPosition = Template.bind({});
+TopPosition.args = {
+  text: "Popover",
+  position: "top",
+};
+
+export const BottomPosition = Template.bind({});
+BottomPosition.args = {
+  text: "Popover",
+  position: "bottom",
+};
+
+export const TopPositionAndNubbin = Template.bind({});
+TopPositionAndNubbin.args = {
+  text: "Popover",
+  position: "top",
+  hasNubbin: true,
+};
+
+export const BottomPositionAndNubbin = Template.bind({});
+BottomPositionAndNubbin.args = {
+  text: "Popover",
+  position: "bottom",
+  hasNubbin: true,
+};
+
+export const LongText = Template.bind({});
+LongText.args = {
+  text: "I am a Popover with very long text!",
+};

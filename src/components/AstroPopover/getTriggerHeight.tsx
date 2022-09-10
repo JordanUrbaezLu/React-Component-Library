@@ -1,6 +1,6 @@
 import * as React from "react";
 
-export const getPopoverContainerHeight = ({
+export const getTriggerHeight = ({
   ref,
 }: {
   ref: React.RefObject<HTMLDivElement>;
