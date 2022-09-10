@@ -45,8 +45,8 @@ Large.args = {
 
 export const Placeholder = Template.bind({});
 Placeholder.args = {
-    placeholder: "Search..."
-}
+  placeholder: "Search...",
+};
 
 // disabled state needs better design
 export const Disabled = Template.bind({});

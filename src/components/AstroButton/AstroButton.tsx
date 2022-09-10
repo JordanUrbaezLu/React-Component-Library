@@ -39,7 +39,7 @@ const AstroButton = React.forwardRef<HTMLButtonElement, AstroButtonProps>(
         )}
       </>
     );
-    
+
     return (
       <button onClick={props.onClick} ref={ref} className={classes}>
         {content}

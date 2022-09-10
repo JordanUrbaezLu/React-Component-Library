@@ -45,17 +45,16 @@ Disabled.args = {
 
 export const LeadingIcon = Template.bind({});
 LeadingIcon.args = {
-    leadingIcon: <AiOutlineArrowLeft />,
-}
+  leadingIcon: <AiOutlineArrowLeft />,
+};
 
 export const TrailingIcon = Template.bind({});
 TrailingIcon.args = {
-    trailingIcon: <AiOutlineArrowRight />,
-}
+  trailingIcon: <AiOutlineArrowRight />,
+};
 
 export const LeadingIconAndTrailingIcon = Template.bind({});
 LeadingIconAndTrailingIcon.args = {
-    leadingIcon: <AiOutlineArrowLeft />,
-    trailingIcon: <AiOutlineArrowRight />
-}
-
+  leadingIcon: <AiOutlineArrowLeft />,
+  trailingIcon: <AiOutlineArrowRight />,
+};
