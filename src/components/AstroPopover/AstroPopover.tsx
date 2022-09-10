@@ -1,8 +1,8 @@
 import * as React from "react";
 import styles from "./AstroPopover.module.scss";
 import classNames from "classnames";
-import { getTriggerHeight } from "../../utility/getTriggerHeight";
-import { getPopoverWidth } from "../../utility/getPopoverWidth";
+import { getRefHeight as getTriggerHeight } from "../../utility/getRefHeight";
+import { getRefWidth as getPopoverWidth } from "../../utility/getRefWidth";
 
 export type Position = "bottom" | "left" | "right" | "top";
 

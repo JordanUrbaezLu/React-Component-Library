@@ -1,6 +1,6 @@
 import * as React from "react";
 
-export const getPopoverWidth = ({
+export const getRefWidth = ({
   ref,
 }: {
   ref: React.RefObject<HTMLDivElement>;
