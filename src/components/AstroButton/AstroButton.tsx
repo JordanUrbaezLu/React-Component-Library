@@ -2,14 +2,14 @@ import * as React from "react";
 import styles from "./AstroButton.module.scss";
 import classNames from "classnames";
 
-export type Variants = "primary" | "secondary";
-export type Size = "small" | "medium" | "large";
+export type AstroButtonVariants = "primary" | "secondary";
+export type AstroButtonSize = "small" | "medium" | "large";
 
 interface AstroButtonProps {
   leadingIcon?: React.ReactNode;
   trailingIcon?: React.ReactNode;
-  size?: Size;
-  variant?: Variants;
+  size?: AstroButtonSize;
+  variant?: AstroButtonVariants;
   children: React.ReactNode;
   disabled?: boolean;
   onClick?: () => void;

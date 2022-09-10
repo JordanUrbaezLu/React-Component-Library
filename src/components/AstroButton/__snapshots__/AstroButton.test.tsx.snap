@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AstroButton Should render component correctly. 1`] = `
+<button
+  class="astroButton medium primary"
+>
+  AstroButton
+</button>
+`;
