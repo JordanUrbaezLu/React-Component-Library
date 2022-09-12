@@ -48,13 +48,13 @@ Placeholder.args = {
   placeholder: "Search...",
 };
 
-// disabled state needs better design
+// TODO disabled state needs better design
 export const Disabled = Template.bind({});
 Disabled.args = {
   disabled: true,
 };
 
-// some bug where if the text gets too long it interacts with the trailing icon
+// TODO some bug where if the text gets too long it interacts with the trailing icon
 export const TrailingIcon = Template.bind({});
 TrailingIcon.args = {
   trailingIcon: <AiFillEye />,
@@ -65,7 +65,7 @@ PasswordType.args = {
   type: "password",
 };
 
-// this is broken, maybe because value isn't set, maybe not broken?
+// TODO this is broken, maybe because value isn't set, maybe not broken?
 export const EmailType = Template.bind({});
 EmailType.args = {
   type: "email",

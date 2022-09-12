@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import * as React from "react";
+// TODO style needs some work, text over flows into icon, maybe move icon outside of input box
 import styles from "./AstroTextField.module.scss";
 
 export type Variants = "primary" | "secondary" | "tertiary";
