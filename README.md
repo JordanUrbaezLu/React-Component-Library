@@ -2,7 +2,7 @@
 
 ## Start Contributing to Astro UI Library
 
-### Clone the repository to you rlocal machine
+### Clone the repository to your local machine
 
 `git clone https://github.com/JordanUrbaezLu/astro-ui-library`
 
