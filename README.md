@@ -26,6 +26,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 Runs all the unit tests for the components.\
 Unit tests use React Testing Library and Jest.
 
+### `npm test-u`
+
+Runs all the unit tests for the components and also updates the snapshots.
+Snapshots should only be updated if you already ran `npm test` and failed because a foundamental change was made inside a component.
+
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
