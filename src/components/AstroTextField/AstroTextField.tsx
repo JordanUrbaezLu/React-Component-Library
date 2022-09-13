@@ -3,9 +3,9 @@ import * as React from "react";
 // TODO style needs some work, text over flows into icon, maybe move icon outside of input box
 import styles from "./AstroTextField.module.scss";
 
-export type Variants = "primary" | "secondary" | "tertiary";
-export type Size = "small" | "medium" | "large";
-export type Type =
+export type AstroTextFieldVariants = "primary" | "secondary" | "tertiary";
+export type AstroTextFieldSize = "small" | "medium" | "large";
+export type AstroTextFieldType =
   | "email"
   | "number"
   | "password"
@@ -16,12 +16,13 @@ export type Type =
   | "url";
 
 interface AstroTextFieldProps {
-  variant?: Variants;
-  size?: Size;
+  variant?: AstroTextFieldVariants;
+  size?: AstroTextFieldSize;
   placeholder?: string;
   trailingIcon?: React.ReactNode;
   disabled?: boolean;
-  type?: Type;
+  type?: AstroTextFieldType;
+  label?: string;
 }
 
 const AstroTextField: React.FC<AstroTextFieldProps> = ({
@@ -31,6 +32,7 @@ const AstroTextField: React.FC<AstroTextFieldProps> = ({
   trailingIcon,
   disabled = false,
   type = "text",
+  label = "textfield"
 }) => {
   const classes = classNames(
     styles.astroTextField,
@@ -53,12 +55,13 @@ const AstroTextField: React.FC<AstroTextFieldProps> = ({
   return (
     <div className={styles.astroTextFieldContainer}>
       <input
+        aria-label={label}
         type={type}
         disabled={disabled}
         className={classes}
         placeholder={placeholder}
       />
-      <span className={iconClasses}>{trailingIcon}</span>
+      {trailingIcon && <span className={iconClasses}>{trailingIcon}</span>}
     </div>
   );
 };

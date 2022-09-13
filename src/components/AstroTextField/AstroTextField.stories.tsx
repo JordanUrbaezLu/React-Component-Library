@@ -54,10 +54,9 @@ Disabled.args = {
   disabled: true,
 };
 
-// TODO some bug where if the text gets too long it interacts with the trailing icon
 export const TrailingIcon = Template.bind({});
 TrailingIcon.args = {
-  trailingIcon: <AiFillEye />,
+  trailingIcon: <AiOutlineArrowRight />,
 };
 
 export const PasswordType = Template.bind({});
@@ -65,8 +64,8 @@ PasswordType.args = {
   type: "password",
 };
 
-// TODO this is broken, maybe because value isn't set, maybe not broken?
-export const EmailType = Template.bind({});
-EmailType.args = {
-  type: "email",
+export const TrailingIconAndPasswordType = Template.bind({});
+TrailingIconAndPasswordType.args = {
+  type: "password",
+  trailingIcon: <AiFillEye />,
 };

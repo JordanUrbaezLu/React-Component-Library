@@ -1,24 +1,19 @@
 import styles from "./App.module.scss";
 import * as React from "react";
 import { AiFillEye } from "react-icons/ai";
-import AstroTextField from "./components/AstroTextField/AstroTextField";
-import AstroPopover from "./components/AstroPopover/AstroPopover";
-import AstroButton from "./components/AstroButton/AstroButton";
+import AstroTextField, { AstroTextFieldType } from "./components/AstroTextField/AstroTextField";
 
 const App = () => {
-  const [isOpen, setIsOpen] = React.useState<boolean>(false);
+  const [type, setType] = React.useState<AstroTextFieldType>("password")
 
   return (
     <div className={styles.AppContainer}>
-      <AstroPopover
-        text="pejoqiwdnjndoincoiqwcjoinqwd"
-        position="bottom"
-        isOpen={isOpen}
-        trigger={
-          <AstroButton onClick={() => setIsOpen(!isOpen)} size="large">
-            Button
-          </AstroButton>
-        }
+      <AstroTextField
+        variant="primary"
+        size="large"
+        type={type}
+        placeholder="Password Type AstroTextField"
+        trailingIcon={<AiFillEye onClick={() => setType("text")} />}
       />
     </div>
   );

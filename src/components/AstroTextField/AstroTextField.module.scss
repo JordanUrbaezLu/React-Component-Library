@@ -3,7 +3,6 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  position: relative;
 }
 
 .astroTextField {
@@ -51,33 +50,27 @@
 }
 
 .iconSmall {
-  position: absolute;
   font-size: 21px;
   padding: 1px;
   display: flex;
   align-items: center;
   cursor: pointer;
-  left: 135px;
 }
 
 .iconMedium {
-  position: absolute;
   font-size: 28px;
   padding: 3px;
   display: flex;
   align-items: center;
   cursor: pointer;
-  left: 202px;
 }
 
 .iconLarge {
-  position: absolute;
   font-size: 35px;
   padding: 5px;
   display: flex;
   align-items: center;
   cursor: pointer;
-  left: 268px;
 }
 
 .disabled {
