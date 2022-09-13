@@ -4,6 +4,7 @@ import classNames from "classnames";
 
 export type AstroButtonVariants = "primary" | "secondary";
 export type AstroButtonSize = "small" | "medium" | "large";
+export type AstroButtonType = "button" | "submit" | "reset";
 
 interface AstroButtonProps {
   leadingIcon?: React.ReactNode;
@@ -12,6 +13,7 @@ interface AstroButtonProps {
   variant?: AstroButtonVariants;
   children: React.ReactNode;
   disabled?: boolean;
+  type?: AstroButtonType; //TODO add tests to type?
   onClick?: () => void;
 }
 
@@ -41,7 +43,18 @@ const AstroButton = React.forwardRef<HTMLButtonElement, AstroButtonProps>(
     );
 
     return (
-      <button onClick={props.onClick} ref={ref} className={classes}>
+      <button
+        type={
+          props.type === "reset"
+            ? "reset"
+            : props.type === "submit"
+            ? "submit"
+            : "button"
+        }
+        onClick={props.onClick}
+        ref={ref}
+        className={classes}
+      >
         {content}
       </button>
     );

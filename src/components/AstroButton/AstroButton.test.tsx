@@ -2,6 +2,7 @@ import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import AstroButton, {
   AstroButtonSize,
+  AstroButtonType,
   AstroButtonVariants,
 } from "./AstroButton";
 import { axe, toHaveNoViolations } from "jest-axe";
@@ -68,4 +69,11 @@ describe("Props", () => {
       screen.getByRole("button", { name: "AstroButton" })
     ).toBeInTheDocument();
   });
+  test.each<AstroButtonType>(["button", "reset", "submit"])(
+    "Should render type correctly.",
+    (type) => {
+      render(<AstroButton type={type}>AstroButton</AstroButton>);
+      expect(screen.getByRole("button", {name: "AstroButton" })).toHaveAttribute("type", type);
+    }
+  )
 });

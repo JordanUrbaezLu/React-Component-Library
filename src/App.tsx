@@ -1,34 +1,24 @@
 import styles from "./App.module.scss";
+import * as React from "react";
 import { AiFillEye } from "react-icons/ai";
 import AstroTextField from "./components/AstroTextField/AstroTextField";
+import AstroPopover from "./components/AstroPopover/AstroPopover";
+import AstroButton from "./components/AstroButton/AstroButton";
 
 const App = () => {
+  const [isOpen, setIsOpen] = React.useState<boolean>(false);
+
   return (
     <div className={styles.AppContainer}>
-      <AstroTextField size="large" variant="primary" />
-      <AstroTextField size="medium" variant="secondary" />
-      <AstroTextField size="small" variant="tertiary" />
-      <AstroTextField placeholder="PLACEHOLDER" />
-      <AstroTextField
-        size="small"
-        placeholder="TRAILING SMALL"
-        trailingIcon={<AiFillEye />}
-      />
-      <AstroTextField
-        size="medium"
-        placeholder="TRAILING MEDIUM"
-        trailingIcon={<AiFillEye />}
-      />
-      <AstroTextField
-        size="large"
-        placeholder="TRAILING LARGE"
-        trailingIcon={<AiFillEye />}
-      />
-      <AstroTextField
-        placeholder="DISABLED"
-        disabled
-        size="small"
-        variant="tertiary"
+      <AstroPopover
+        text="pejoqiwdnjndoincoiqwcjoinqwd"
+        position="bottom"
+        isOpen={isOpen}
+        trigger={
+          <AstroButton onClick={() => setIsOpen(!isOpen)} size="large">
+            Button
+          </AstroButton>
+        }
       />
     </div>
   );

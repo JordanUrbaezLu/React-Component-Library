@@ -9,11 +9,12 @@
   color: rgb(223, 223, 223);
   position: absolute;
   text-align: center;
-  width: 120px;
+  min-width: 20px;
+  max-width: 250px;
   background-color: rgb(60, 60, 60);
   border-radius: 4px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  padding: 6px;
+  padding: 10px 16px;
   text-overflow: wrap;
   word-wrap: break-word;
   margin-top: 4px;
