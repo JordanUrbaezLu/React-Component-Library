@@ -1,6 +1,6 @@
 import styles from "./App.module.scss";
 import AstroSelect from "./components/AstroSelect/AstroSelect";
-import AstroSelectItem from "./components/AstroSelect/AstroSelectItem";
+import AstroSelectItem from "./components/AstroSelect/AstroSelectItem/AstroSelectItem";
 
 const App = () => {
   return (
