@@ -30,9 +30,11 @@ const AstroSelect: React.FC<AstroSelectProps> = ({
   const [isOpen, setIsOpen] = React.useState<boolean>(false);
 
   return (
-    <div className={classes} onClick={() => setIsOpen(!isOpen)} role="list">
+    <div className={classes} role="list">
       {label}
-      <span className={iconClasses}>{<IoChevronDownSharp />}</span>
+      <span onClick={() => setIsOpen(!isOpen)} className={iconClasses}>
+        {<IoChevronDownSharp />}
+      </span>
       {isOpen && <ul className={styles.selectMenu}>{children}</ul>}
     </div>
   );
