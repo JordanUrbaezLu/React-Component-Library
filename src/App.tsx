@@ -1,20 +1,15 @@
 import styles from "./App.module.scss";
-import * as React from "react";
-import { AiFillEye } from "react-icons/ai";
-import AstroTextField, { AstroTextFieldType } from "./components/AstroTextField/AstroTextField";
+import AstroSelect from "./components/AstroSelect/AstroSelect";
+import AstroSelectItem from "./components/AstroSelect/AstroSelectItem";
 
 const App = () => {
-  const [type, setType] = React.useState<AstroTextFieldType>("password")
-
   return (
     <div className={styles.AppContainer}>
-      <AstroTextField
-        variant="primary"
-        size="large"
-        type={type}
-        placeholder="Password Type AstroTextField"
-        trailingIcon={<AiFillEye onClick={() => setType("text")} />}
-      />
+      <AstroSelect variant="secondary" label="Helo">
+        <AstroSelectItem>Option 1</AstroSelectItem>
+        <AstroSelectItem>Option 2</AstroSelectItem>
+        <AstroSelectItem>Option 3</AstroSelectItem>
+      </AstroSelect>
     </div>
   );
 };

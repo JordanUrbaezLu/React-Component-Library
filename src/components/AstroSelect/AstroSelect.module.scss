@@ -1,0 +1,42 @@
+.astroSelect {
+  border-radius: 5px;
+  outline: none !important;
+  padding: 5px;
+  font-size: 28px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.selectMenu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+
+.primary {
+  border: 3px solid rgb(255, 220, 100);
+  &:focus {
+    border: 3px solid rgb(255, 183, 77);
+  }
+}
+
+.secondary {
+  border: 3px solid rgb(192, 137, 243);
+  &:focus {
+    border: 3px solid rgb(147 51 234);
+  }
+}
+
+.iconPrimary {
+    color: rgb(255, 183, 77);
+    display: flex;
+}
+
+.iconSecondary {
+    color: rgb(147 51 234);
+    display: flex;
+}

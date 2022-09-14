@@ -12,6 +12,7 @@ describe("AstroTextField", () => {
   // Fixes some jest-axe issues
   const { getComputedStyle } = window;
   window.getComputedStyle = (elt) => getComputedStyle(elt);
+  // Fixes some jest-axe issues
   test("Should render component correctly.", () => {
     const { container } = render(<AstroTextField />);
     expect(container.firstChild).toMatchSnapshot();
