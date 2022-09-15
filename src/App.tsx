@@ -5,10 +5,11 @@ import AstroSelectItem from "./components/AstroSelect/AstroSelectItem/AstroSelec
 const App = () => {
   return (
     <div className={styles.AppContainer}>
-      <AstroSelect variant="secondary" label="Helo">
-        <AstroSelectItem>Option 1</AstroSelectItem>
-        <AstroSelectItem>Option 2</AstroSelectItem>
-        <AstroSelectItem>Option 3</AstroSelectItem>
+      <AstroSelect variant="primary" label="AstroSelect">
+        <AstroSelectItem>Button</AstroSelectItem>
+        <AstroSelectItem>Popover</AstroSelectItem>
+        <AstroSelectItem>TextField</AstroSelectItem>
+        <AstroSelectItem>Checkbox</AstroSelectItem>
       </AstroSelect>
     </div>
   );

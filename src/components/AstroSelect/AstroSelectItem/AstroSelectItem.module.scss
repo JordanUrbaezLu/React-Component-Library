@@ -1,0 +1,14 @@
+@use "../../../utility/globals";
+
+.astroSelectItem {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: left;
+  padding: 5px;
+  font-size: 24px;
+  color: white;
+  background-color: rgb(50, 50, 50);
+  cursor: pointer;
+  &:hover {
+    background-color: rgb(80, 80, 80);
+  }
+}

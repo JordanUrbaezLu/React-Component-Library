@@ -1,3 +1,5 @@
+@use "../../utility/globals";
+
 .astroTextFieldContainer {
   display: flex;
   flex-direction: row;
@@ -11,23 +13,23 @@
 }
 
 .primary {
-  border: 3px solid rgb(255, 220, 100);
+  border: 3px solid globals.$primary-color;
   &:focus {
-    border: 3px solid rgb(255, 183, 77);
+    border: 3px solid globals.$primary-color-pseudo-class;
   }
 }
 
 .secondary {
-  border: 3px solid rgb(192, 137, 243);
+  border: 3px solid globals.$secondary-color;
   &:focus {
-    border: 3px solid rgb(147 51 234);
+    border: 3px solid globals.$secondary-color-pseudo-class;
   }
 }
 
 .tertiary {
-  border: 3px solid lightgray;
+  border: 3px solid globals.$tertiary-color;
   &:focus {
-    border: 3px solid darkgray;
+    border: 3px solid globals.$tertiary-color-pseudo-class;
   }
 }
 

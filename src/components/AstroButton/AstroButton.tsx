@@ -13,7 +13,7 @@ interface AstroButtonProps {
   variant?: AstroButtonVariants;
   children: React.ReactNode;
   disabled?: boolean;
-  type?: AstroButtonType; //TODO add tests to type?
+  type?: AstroButtonType;
   onClick?: () => void;
 }
 

@@ -1,20 +1,26 @@
+.astroSelectContainer {
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+}
+
 .astroSelect {
   border-radius: 5px;
   outline: none !important;
-  padding: 5px;
-  font-size: 28px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   display: flex;
   flex-direction: row;
   align-items: center;
-  position: relative;
+  column-gap: 6px;
 }
 
-.selectMenu {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 40px;
+.selectOptionsMenu {
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  padding: 4px 0px;
+  background-color: rgb(50, 50, 50);
+  position: relative;
 }
 
 .primary {
@@ -31,14 +37,29 @@
   }
 }
 
+.small {
+  padding: 4px;
+  font-size: 24px;
+}
+
+.medium {
+  padding: 6px;
+  font-size: 28px;
+}
+
+.large {
+  padding: 6px;
+  font-size: 32px;
+}
+
 .iconPrimary {
-    color: rgb(255, 183, 77);
-    display: flex;
-    cursor: pointer;
+  color: rgb(255, 183, 77);
+  display: flex;
+  cursor: pointer;
 }
 
 .iconSecondary {
-    color: rgb(147 51 234);
-    display: flex;
-    cursor: pointer;
+  color: rgb(147 51 234);
+  display: flex;
+  cursor: pointer;
 }
