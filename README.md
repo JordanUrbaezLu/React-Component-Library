@@ -32,6 +32,8 @@
 
 `git push origin <your-branch-name>`
 
+### 8. Merge your PR after it gets approved!
+
 ## Available Scripts
 
 In the project directory, you can run:
