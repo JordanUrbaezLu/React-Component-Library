@@ -1,5 +1,7 @@
 # Getting Started with Astro UI Library
 
+![image](https://user-images.githubusercontent.com/93447469/190551386-74f76819-37ba-4e17-9217-3f87bed1a75b.png)
+
 ## Start Contributing to Astro UI Library
 
 ### 1. Clone the repository to your local machine.
