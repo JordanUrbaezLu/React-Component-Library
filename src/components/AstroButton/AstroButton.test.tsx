@@ -73,7 +73,9 @@ describe("Props", () => {
     "Should render type correctly.",
     (type) => {
       render(<AstroButton type={type}>AstroButton</AstroButton>);
-      expect(screen.getByRole("button", {name: "AstroButton" })).toHaveAttribute("type", type);
+      expect(
+        screen.getByRole("button", { name: "AstroButton" })
+      ).toHaveAttribute("type", type);
     }
-  )
+  );
 });

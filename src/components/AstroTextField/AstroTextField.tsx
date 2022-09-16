@@ -32,7 +32,7 @@ const AstroTextField: React.FC<AstroTextFieldProps> = ({
   trailingIcon,
   disabled = false,
   type = "text",
-  label = "textfield"
+  label = "textfield",
 }) => {
   const classes = classNames(
     styles.astroTextField,
