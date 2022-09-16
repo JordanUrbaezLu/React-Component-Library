@@ -8,37 +8,30 @@
 
 `git clone https://github.com/JordanUrbaezLu/astro-ui-library`
 
-&nbsp;
 ### 2. Install node-modules and dependencies.
 
 `cd astro-ui-library`
 
 `npm install`
 
-&nbsp;
 ### 3. Create a new branch off main.
 
 `git checkout -b <new-branch-name>`
 
-&nbsp;
 ### 4. Make some improvements to the code base!
 
-&nbsp;
 ### 5. After making improvements, add your files to the staging area.
 
 `git add .`
 
-&nbsp;
 ### 6. Now commit your files and leave a message using [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
 `git commit -m "<type>[scope/component]: <description>"`
 
-&nbsp;
 ### 7. Raise a pull request for the project owner to review!
 
 `git push origin <your-branch-name>`
 
-&nbsp;
 ## Available Scripts
 
 In the project directory, you can run:

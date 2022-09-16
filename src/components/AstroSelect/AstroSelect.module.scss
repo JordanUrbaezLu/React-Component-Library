@@ -29,7 +29,30 @@
   border-radius: 4px;
   padding: 4px 0px;
   background-color: rgb(50, 50, 50);
-  position: relative;
+}
+
+.label {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding-left: 8px;
+  &.smallLabel {
+    font-size: 8px;
+  }
+
+  &.mediumLabel {
+    font-size: 12px;
+  }
+
+  &.largeLabel {
+    font-size: 16px;
+  }
+
+  &.primaryLabel {
+    color: rgb(255, 183, 77);
+  }
+
+  &.secondaryLabel {
+    color: rgb(147 51 234);
+  }
 }
 
 .primary {

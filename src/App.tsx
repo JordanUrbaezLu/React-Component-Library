@@ -10,7 +10,7 @@ const App = () => {
         <AstroSelectItem value="Three Pointer" />
         <AstroSelectItem value="Toastre" />
       </AstroSelect>
-      <AstroSelect variant="primary" size="medium">
+      <AstroSelect variant="primary" size="medium" label="AstroSelect">
         <AstroSelectItem value="Lebron" />
         <AstroSelectItem value="Three Pointer" />
         <AstroSelectItem value="Toastre" />
