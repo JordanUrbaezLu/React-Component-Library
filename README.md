@@ -2,15 +2,33 @@
 
 ## Start Contributing to Astro UI Library
 
-### Clone the repository to your local machine
+### 1. Clone the repository to your local machine.
 
 `git clone https://github.com/JordanUrbaezLu/astro-ui-library`
 
-### Install node-modules and dependencies
+### 2. Install node-modules and dependencies.
 
 `cd astro-ui-library`
 
 `npm install`
+
+### 3. Create a new branch off main.
+
+`git checkout -b <new-branch-name>`
+
+### 4. Make some improvements to the code base!
+
+### 5. After making improvements, add your files to the staging area.
+
+`git add .`
+
+### 6. Now commit your files and leave a message using [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/).
+
+`git commit -m "<type>[scope/component]: <description>"`
+
+### 7. Raise a pull request for the project owner to review!
+
+`git push origin <your-branch-name>`
 
 ## Available Scripts
 
