@@ -73,7 +73,10 @@ const AstroSelect: React.FC<AstroSelectProps> = ({
             const item = child as React.ReactElement;
             return (
               <div
-                onClick={() => setValue(item.props.value)}
+                onClick={() => {
+                  setValue(item.props.value);
+                  setIsOpen(!isOpen);
+                }}
                 className={itemClasses}
               >
                 {item}
