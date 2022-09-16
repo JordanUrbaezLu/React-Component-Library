@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import AstroTextField, {
   AstroTextFieldSize,
-  AstroTextFieldVariants,
+  AstroTextFieldVariant,
   AstroTextFieldType,
 } from "./AstroTextField";
 import { axe, toHaveNoViolations } from "jest-axe";
@@ -28,7 +28,7 @@ describe("Accessibility", () => {
 });
 
 describe("Props", () => {
-  test.each<AstroTextFieldVariants>(["primary", "secondary", "tertiary"])(
+  test.each<AstroTextFieldVariant>(["primary", "secondary", "tertiary"])(
     "Should render variants correctly.",
     (variant) => {
       render(<AstroTextField variant={variant} />);

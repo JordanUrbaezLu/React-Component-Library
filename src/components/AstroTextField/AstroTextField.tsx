@@ -3,7 +3,7 @@ import * as React from "react";
 // TODO style needs some work, text over flows into icon, maybe move icon outside of input box
 import styles from "./AstroTextField.module.scss";
 
-export type AstroTextFieldVariants = "primary" | "secondary" | "tertiary";
+export type AstroTextFieldVariant = "primary" | "secondary" | "tertiary";
 export type AstroTextFieldSize = "small" | "medium" | "large";
 export type AstroTextFieldType =
   | "email"
@@ -16,7 +16,7 @@ export type AstroTextFieldType =
   | "url";
 
 interface AstroTextFieldProps {
-  variant?: AstroTextFieldVariants;
+  variant?: AstroTextFieldVariant;
   size?: AstroTextFieldSize;
   placeholder?: string;
   trailingIcon?: React.ReactNode;
