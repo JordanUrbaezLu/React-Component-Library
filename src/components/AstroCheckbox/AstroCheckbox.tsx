@@ -17,7 +17,7 @@ interface AstroCheckbox {
 
 const AstroCheckbox: React.FC<AstroCheckbox> = ({}) => {
   // * Finish implementing AstroCheckbox component
-  return <div>Hi There Jaosn</div>;
+  return <div></div>;
 };
 
 export default AstroCheckbox;
