@@ -8,17 +8,17 @@ const App = () => {
       <AstroSelect variant="primary" size="large">
         <AstroSelectItem value="Lebron" />
         <AstroSelectItem value="Three Pointer" />
-        <AstroSelectItem value="Toastre" />
+        <AstroSelectItem value="Toaster" />
       </AstroSelect>
       <AstroSelect variant="primary" size="medium" label="AstroSelect">
         <AstroSelectItem value="Lebron" />
         <AstroSelectItem value="Three Pointer" />
-        <AstroSelectItem value="Toastre" />
+        <AstroSelectItem value="Toaster" />
       </AstroSelect>
       <AstroSelect variant="primary" size="small" width={300}>
         <AstroSelectItem value="Lebron" />
         <AstroSelectItem value="Three Pointer" />
-        <AstroSelectItem value="Toastre" />
+        <AstroSelectItem value="Toaster" />
       </AstroSelect>
     </div>
   );
