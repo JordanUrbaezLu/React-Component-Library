@@ -28,7 +28,7 @@ describe("Props", () => {
     "Should render variants correctly.",
     (variant) => {
       render(<AstroSelect label="select" variant={variant} />);
-      expect(screen.getByText("selects")).toHaveClass(`${variant}Label`);
+      expect(screen.getByText("select")).toHaveClass(`${variant}Label`);
     }
   );
 
