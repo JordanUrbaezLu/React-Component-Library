@@ -1,11 +1,11 @@
-name: Node CI
+name: Build
 
 on: 
   pull_request:
     branches: [ main ]
 
 jobs: 
-  test_pull_request:
+  build:
     runs-on: ubuntu-latest
     steps: 
       - uses: actions/checkout@v2
@@ -13,5 +13,4 @@ jobs:
         with:
           node-version: 12
       - run: npm ci
-      - run: npm test
       - run: npm run build
