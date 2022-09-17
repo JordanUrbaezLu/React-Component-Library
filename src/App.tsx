@@ -18,7 +18,7 @@ const App = () => {
       <AstroSelect variant="primary" size="small" width={300}>
         <AstroSelectItem value="Lebron" />
         <AstroSelectItem value="Three Pointer" />
-        <AstroSelectIte value="Toastre" />
+        <AstroSelectItem value="Toastre" />
       </AstroSelect>
     </div>
   );
