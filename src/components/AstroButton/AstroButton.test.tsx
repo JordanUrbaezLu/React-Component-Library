@@ -50,7 +50,7 @@ describe("Props", () => {
   });
 
   test("Should render trailing icon correctly.", () => {
-    render(<AstroButton trailingIcon="trailing">Astroutton</AstroButton>);
+    render(<AstroButton trailingIcon="trailing">AstroButton</AstroButton>);
     expect(
       screen.getByRole("button", { name: "AstroButton trailing" })
     ).toBeInTheDocument();
