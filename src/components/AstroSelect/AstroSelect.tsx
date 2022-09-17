@@ -7,16 +7,17 @@ import * as React from "react";
 export type AstroSelectVariant = "primary" | "secondary";
 export type AstroSelectSize = "small" | "medium" | "large";
 
-// TODO: Add a label to categorize the options
 interface AstroSelectProps {
   variant?: AstroSelectVariant;
   children?: React.ReactNode;
   size?: AstroSelectSize;
   width?: number;
+  label?: string;
 }
 
 const AstroSelect: React.FC<AstroSelectProps> = ({
   children,
+  label,
   width,
   variant = "primary",
   size = "medium",
@@ -26,6 +27,15 @@ const AstroSelect: React.FC<AstroSelectProps> = ({
     size === "small" && styles.smallContainer,
     size === "medium" && styles.mediumContainer,
     size === "large" && styles.largeContainer
+  );
+
+  const labelClasses = classNames(
+    styles.label,
+    size === "small" && styles.smallLabel,
+    size === "medium" && styles.mediumLabel,
+    size === "large" && styles.largeLabel,
+    variant === "primary" && styles.primaryLabel,
+    variant === "secondary" && styles.secondaryLabel
   );
 
   const classes = classNames(
@@ -61,6 +71,7 @@ const AstroSelect: React.FC<AstroSelectProps> = ({
       className={containerClasses}
       style={width ? { width: `${width}px` } : {}}
     >
+      {label && <div className={labelClasses}>{label}</div>}
       <div className={classes}>
         <div style={{ paddingLeft: "4px" }}>{value}</div>
         <div className={iconClasses} onClick={() => setIsOpen(!isOpen)}>
