@@ -1,5 +1,6 @@
 {
   "name": "astro-ui-library",
+  "homepage": "https://jordanurbaezlu.github.io/astro-ui-library",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -19,6 +20,8 @@
     "typescript": "<4.8"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,mdx,css,scss}\"",
     "build": "react-scripts build",
@@ -69,6 +72,7 @@
     "@storybook/testing-library": "^0.0.13",
     "@types/jest-axe": "^3.5.4",
     "babel-plugin-named-exports-order": "^0.0.2",
+    "gh-pages": "^4.0.0",
     "jest-axe": "^6.0.0",
     "prettier": "^2.2.1",
     "prop-types": "^15.8.1",
