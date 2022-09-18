@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/astro-ui-library/static/css/main.85a64376.css",
-    "main.js": "/astro-ui-library/static/js/main.46c861fb.js",
+    "main.css": "/astro-ui-library/static/css/main.032b7421.css",
+    "main.js": "/astro-ui-library/static/js/main.fe22e35a.js",
     "index.html": "/astro-ui-library/index.html",
-    "main.85a64376.css.map": "/astro-ui-library/static/css/main.85a64376.css.map",
-    "main.46c861fb.js.map": "/astro-ui-library/static/js/main.46c861fb.js.map"
+    "main.032b7421.css.map": "/astro-ui-library/static/css/main.032b7421.css.map",
+    "main.fe22e35a.js.map": "/astro-ui-library/static/js/main.fe22e35a.js.map"
   },
   "entrypoints": [
-    "static/css/main.85a64376.css",
-    "static/js/main.46c861fb.js"
+    "static/css/main.032b7421.css",
+    "static/js/main.fe22e35a.js"
   ]
 }
