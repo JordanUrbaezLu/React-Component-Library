@@ -1,11 +1,14 @@
 name: Deploy
 
-on: 
+on:
   pull_request:
-    branches: [ main ]
+    branches: 
+      - main
+    types: [closed]
 
 jobs: 
   build:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps: 
       - uses: actions/checkout@v2
@@ -13,8 +16,8 @@ jobs:
         with: 
           node-version: 12
       - run: npm ci
-      - run: npm run build
+      - run: npm run build-storybook
       - uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: build # The folder the action should deploy.
+          folder: storybook-static # The folder the action should deploy.
