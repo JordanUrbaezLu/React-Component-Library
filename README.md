@@ -72,3 +72,7 @@ Open [http://localhost:6006](http://localhost:6006) to view Storybook in the bro
 ### `npm run build-storybook`
 
 Builds a production ready, static version of your Storybook app to the `storybook-static` folder.
+
+### `npm run clean`
+
+Removes the build and storybook-static directories.
