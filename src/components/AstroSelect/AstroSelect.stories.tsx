@@ -47,12 +47,12 @@ Large.args = {
 export const Label = Template.bind({});
 Label.args = {
   label: "Age",
-}
+};
 
 export const Width = Template.bind({});
 Width.args = {
   width: 500,
-}
+};
 
 export const AllProps = Template.bind({});
 AllProps.args = {
@@ -60,4 +60,4 @@ AllProps.args = {
   size: "large",
   label: "Age",
   width: 100,
-}
+};
