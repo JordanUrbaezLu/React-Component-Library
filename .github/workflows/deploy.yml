@@ -7,7 +7,7 @@ on:
     types: [closed]
 
 jobs: 
-  build:
+  deploy:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps: 
