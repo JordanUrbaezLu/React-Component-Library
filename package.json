@@ -1,7 +1,7 @@
 {
   "name": "astro-ui-library",
   "homepage": "https://jordanurbaezlu.github.io/astro-ui-library",
-  "version": "0.1.0",
+  "version": "0.0.0-development",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -27,7 +27,8 @@
     "test-u": "react-scripts test -u --watchAll=false",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "clean": "rm -r coverage build storybook-static"
+    "clean": "rm -r coverage build storybook-static",
+    "semantic-release": "semantic-release --branches main"
   },
   "eslintConfig": {
     "extends": [
@@ -76,6 +77,11 @@
     "prettier": "^2.2.1",
     "prop-types": "^15.8.1",
     "storybook-dark-mode": "^1.1.2",
-    "webpack": "^5.74.0"
+    "webpack": "^5.74.0",
+    "semantic-release": "^19.0.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JordanUrbaezLu/astro-ui-library.git"
   }
 }
