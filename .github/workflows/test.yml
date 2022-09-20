@@ -19,7 +19,7 @@ jobs:
       # setup nodeJS to be able to run the commands/scripts
       - uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: 16
       # run the "npm ci" script which is npm clean install 
       - run: npm ci
       # run the "npm run test" scripts which runs the test script for the project
