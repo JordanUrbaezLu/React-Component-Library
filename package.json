@@ -12,6 +12,7 @@
     "@types/react": "^18.0.18",
     "@types/react-dom": "^18.0.6",
     "classnames": "^2.3.1",
+    "commitizen": "^4.2.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
@@ -23,6 +24,7 @@
     "start": "react-scripts start",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,mdx,css,scss}\"",
     "build": "react-scripts build",
+    "commit": "git cz",
     "test": "react-scripts test --watchAll=false",
     "test-u": "react-scripts test -u --watchAll=false",
     "storybook": "start-storybook -p 6006 -s public",
@@ -72,16 +74,22 @@
     "@storybook/testing-library": "^0.0.13",
     "@types/jest-axe": "^3.5.4",
     "babel-plugin-named-exports-order": "^0.0.2",
+    "cz-conventional-changelog": "^3.3.0",
     "gh-pages": "^4.0.0",
     "jest-axe": "^6.0.0",
     "prettier": "^2.2.1",
     "prop-types": "^15.8.1",
+    "semantic-release": "^19.0.5",
     "storybook-dark-mode": "^1.1.2",
-    "webpack": "^5.74.0",
-    "semantic-release": "^19.0.5"
+    "webpack": "^5.74.0"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/JordanUrbaezLu/astro-ui-library.git"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
