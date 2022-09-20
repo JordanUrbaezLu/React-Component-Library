@@ -5,6 +5,11 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  .disabled {
+    border: none !important;
+    cursor: default !important;
+    background-color: rgb(204, 203, 203);
+  }
 }
 
 .astroTextField {
@@ -73,9 +78,4 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-}
-
-.disabled {
-  border: none !important;
-  cursor: default !important;
 }
