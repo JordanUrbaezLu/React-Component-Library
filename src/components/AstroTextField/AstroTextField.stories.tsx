@@ -48,10 +48,10 @@ Placeholder.args = {
   placeholder: "Search...",
 };
 
-// TODO disabled state needs better design
 export const Disabled = Template.bind({});
 Disabled.args = {
   disabled: true,
+  placeholder: "Disabled",
 };
 
 export const TrailingIcon = Template.bind({});
@@ -69,3 +69,12 @@ TrailingIconAndPasswordType.args = {
   type: "password",
   trailingIcon: <AiFillEye />,
 };
+
+export const AllProps = Template.bind({});
+AllProps.args = {
+  variant: "secondary",
+  size: "small",
+  placeholder: "Password",
+  type: "password",
+  trailingIcon: <AiFillEye />,
+}

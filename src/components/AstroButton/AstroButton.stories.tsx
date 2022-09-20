@@ -58,3 +58,11 @@ LeadingIconAndTrailingIcon.args = {
   leadingIcon: <AiOutlineArrowLeft />,
   trailingIcon: <AiOutlineArrowRight />,
 };
+
+export const AllProps = Template.bind({});
+AllProps.args = {
+  size: "large",
+  variant: "secondary",
+  leadingIcon: <AiOutlineArrowLeft />,
+  trailingIcon: <AiOutlineArrowRight />,
+}

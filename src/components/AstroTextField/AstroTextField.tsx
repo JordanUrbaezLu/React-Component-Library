@@ -1,6 +1,5 @@
 import classNames from "classnames";
 import * as React from "react";
-// TODO style needs some work, text over flows into icon, maybe move icon outside of input box
 import styles from "./AstroTextField.module.scss";
 
 export type AstroTextFieldVariant = "primary" | "secondary" | "tertiary";
@@ -34,6 +33,11 @@ const AstroTextField: React.FC<AstroTextFieldProps> = ({
   type = "text",
   label = "textfield",
 }) => {
+  const container = classNames(
+    styles.astroTextFieldContainer,
+    disabled && styles.disabled
+  );
+
   const classes = classNames(
     styles.astroTextField,
     variant === "primary" && styles.primary,
@@ -53,7 +57,7 @@ const AstroTextField: React.FC<AstroTextFieldProps> = ({
   );
 
   return (
-    <div className={styles.astroTextFieldContainer}>
+    <div className={container}>
       <input
         aria-label={label}
         type={type}

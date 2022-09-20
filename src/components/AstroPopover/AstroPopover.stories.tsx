@@ -57,3 +57,10 @@ export const LongText = Template.bind({});
 LongText.args = {
   text: "I am a Popover with very long text!",
 };
+
+export const AllProps = Template.bind({});
+AllProps.args = {
+  text: "I am a Popover with very long text!",
+  position: "top",
+  hasNubbin: true,
+}

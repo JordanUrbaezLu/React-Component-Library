@@ -79,7 +79,6 @@ const AstroSelect: React.FC<AstroSelectProps> = ({
         </div>
       </div>
       {isOpen && (
-        // TODO: Have menu hover over content, currently display block and moves everything below furthur down
         <div className={styles.selectOptionsMenu}>
           {React.Children.map(children, (child) => {
             const item = child as React.ReactElement;
