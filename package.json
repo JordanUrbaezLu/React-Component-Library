@@ -2,7 +2,7 @@
   "name": "astro-ui-library",
   "homepage": "https://jordanurbaezlu.github.io/astro-ui-library",
   "version": "0.0.0-development",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
