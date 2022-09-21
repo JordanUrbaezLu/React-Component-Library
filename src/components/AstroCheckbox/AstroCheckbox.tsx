@@ -1,4 +1,5 @@
 import * as React from "react";
+import styles from "./AstroCheckbox.module.scss";
 
 export type AstroCheckboxVariant = "primary" | "secondary";
 
@@ -17,7 +18,7 @@ interface AstroCheckbox {
 
 const AstroCheckbox: React.FC<AstroCheckbox> = ({}) => {
   // * Finish implementing AstroCheckbox component
-  return <div></div>;
+  return <div>AstroCheckbox</div>;
 };
 
 export default AstroCheckbox;

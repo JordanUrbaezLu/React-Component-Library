@@ -44,11 +44,6 @@ describe("Props", () => {
     }
   );
 
-  test("Should render placeholder correctly.", () => {
-    render(<AstroTextField placeholder="placeholder" />);
-    expect(screen.getByPlaceholderText("placeholder")).toBeInTheDocument();
-  });
-
   test("Should render disabled correctly.", () => {
     render(<AstroTextField disabled />);
     expect(screen.getByLabelText("textfield")).toHaveClass("disabled");

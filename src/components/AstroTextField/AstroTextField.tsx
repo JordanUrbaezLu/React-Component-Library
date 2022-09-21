@@ -17,7 +17,6 @@ export type AstroTextFieldType =
 interface AstroTextFieldProps {
   variant?: AstroTextFieldVariant;
   size?: AstroTextFieldSize;
-  placeholder?: string;
   trailingIcon?: React.ReactNode;
   disabled?: boolean;
   type?: AstroTextFieldType;
@@ -27,13 +26,12 @@ interface AstroTextFieldProps {
 const AstroTextField: React.FC<AstroTextFieldProps> = ({
   variant = "primary",
   size = "medium",
-  placeholder,
   trailingIcon,
   disabled = false,
   type = "text",
   label = "textfield",
 }) => {
-  const container = classNames(
+  const inputContainer = classNames(
     styles.astroTextFieldContainer,
     disabled && styles.disabled
   );
@@ -50,21 +48,33 @@ const AstroTextField: React.FC<AstroTextFieldProps> = ({
   );
 
   const iconClasses = classNames(
+    styles.icon,
     size === "small" && styles.iconSmall,
     size === "medium" && styles.iconMedium,
     size === "large" && styles.iconLarge,
     disabled && styles.disabled
   );
 
+  const labelClasses = classNames(
+    styles.label,
+    size === "small" && styles.labelSmall,
+    size === "medium" && styles.labelMedium,
+    size === "large" && styles.labelLarge,
+    disabled && styles.disabledLabel
+  );
+
   return (
-    <div className={container}>
-      <input
-        aria-label={label}
-        type={type}
-        disabled={disabled}
-        className={classes}
-        placeholder={placeholder}
-      />
+    <div className={styles.container}>
+      <div className={inputContainer}>
+        <input
+          aria-label={label}
+          type={type}
+          disabled={disabled}
+          className={classes}
+          required
+        />
+        {label !== "textfield" && <span className={labelClasses}>{label}</span>}
+      </div>
       {trailingIcon && <span className={iconClasses}>{trailingIcon}</span>}
     </div>
   );

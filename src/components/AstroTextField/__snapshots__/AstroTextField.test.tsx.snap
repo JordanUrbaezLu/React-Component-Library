@@ -2,12 +2,17 @@
 
 exports[`AstroTextField Should render component correctly. 1`] = `
 <div
-  class="astroTextFieldContainer"
+  class="container"
 >
-  <input
-    aria-label="textfield"
-    class="astroTextField primary medium"
-    type="text"
-  />
+  <div
+    class="astroTextFieldContainer"
+  >
+    <input
+      aria-label="textfield"
+      class="astroTextField primary medium"
+      required=""
+      type="text"
+    />
+  </div>
 </div>
 `;
