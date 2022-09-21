@@ -43,15 +43,15 @@ Large.args = {
   size: "large",
 };
 
-export const Placeholder = Template.bind({});
-Placeholder.args = {
-  placeholder: "Search...",
+export const Label = Template.bind({});
+Label.args = {
+  label: "AstroTextField",
 };
 
-export const Disabled = Template.bind({});
-Disabled.args = {
+export const DisabledAndLabel = Template.bind({});
+DisabledAndLabel.args = {
   disabled: true,
-  placeholder: "Disabled",
+  label: "Disabled",
 };
 
 export const TrailingIcon = Template.bind({});
@@ -74,7 +74,7 @@ export const AllProps = Template.bind({});
 AllProps.args = {
   variant: "secondary",
   size: "small",
-  placeholder: "Password",
   type: "password",
   trailingIcon: <AiFillEye />,
-}
+  label: "AstroTextField",
+};

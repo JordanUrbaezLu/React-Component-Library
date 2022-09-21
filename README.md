@@ -60,6 +60,10 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.
 
+### `npm run commit`
+
+Run commitizen to help format your commit messages to pass commitlint CI test.
+
 ### `npm run format`
 
 Formats the all the files in the project with Prettier - Code Formatter.
@@ -76,6 +80,3 @@ Builds a production ready, static version of your Storybook app to the `storyboo
 ### `npm run clean`
 
 Removes the build and storybook-static directories.
-
-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
-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

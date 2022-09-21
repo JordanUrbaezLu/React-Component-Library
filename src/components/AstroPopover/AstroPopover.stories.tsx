@@ -63,4 +63,4 @@ AllProps.args = {
   text: "I am a Popover with very long text!",
   position: "top",
   hasNubbin: true,
-}
+};

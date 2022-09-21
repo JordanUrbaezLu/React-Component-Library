@@ -65,4 +65,4 @@ AllProps.args = {
   variant: "secondary",
   leadingIcon: <AiOutlineArrowLeft />,
   trailingIcon: <AiOutlineArrowRight />,
-}
+};
